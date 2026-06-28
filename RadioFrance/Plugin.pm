@@ -151,7 +151,7 @@ my $progDetailsURL = '';
 
 # note - not used much (if at all) in this plugin but imported from Radio Now Playing to aid re-use of routines
 my $globalSettings = {
-	coversearchurl => 'http://www.dabdig.co.uk/coversearch/coversearch.php?station=${stationname}&stationid=${externalstationid}&artist=${songartist}&track=${songtitle}&album=${songalbum}&label=${songlabel}&year=${songyear}&trackid=${trackid}&ver=${pluginname}-${pluginversion}',
+	coversearchurl => 'https://www.dabdig.co.uk/coversearch/coversearch.php?station=${stationname}&stationid=${externalstationid}&artist=${songartist}&track=${songtitle}&album=${songalbum}&label=${songlabel}&year=${songyear}&trackid=${trackid}&ver=${pluginname}-${pluginversion}',
 	coverignoreextension => false,
 	assumeutf => false,
 	timetextaltregex => '^(?<mth>[0-3][0-9])-(?<day>[0-9][0-9])-(?<year>[0-9][0-9][0-9][0-9]) (?<hour>[0-2][0-9]):(?<min>[0-5][0-9]):(?<sec>[0-5][0-9])',	# A US date/time format
@@ -372,52 +372,52 @@ my $urls = {
 	radiofrancebroadcasterdata => '',
 	
 	# Note - loop below adds one hash for each station
-# finished 1521553005 - 2018-03-20 13:36:45	fipradio_alt => 'http://www.fipradio.fr/sites/default/files/import_si/si_titre_antenne/FIP_player_current.json',
+# finished 1521553005 - 2018-03-20 13:36:45	fipradio_alt => 'https://www.fipradio.fr/sites/default/files/import_si/si_titre_antenne/FIP_player_current.json',
 # finished December 2020 - fipradio => 'https://api.radiofrance.fr/livemeta/pull/${stationid}',
 	# finished mid-2023 - fipradio => 'https://api.radiofrance.fr/livemeta/live/${stationid}/webrf_fip_player?preset=400x400',
 	# finished Nov-2024 - fipradio => $type4prefix.'${fetchid}'.$type4suffix,
 # finished March 2026 - fipradio => $type8prefix.'${fetchid}'.$type8suffix,
 	fipradio => $type10prefix.'${stationid}'.$type10esuffix,
 	fipradio_alt => $type10prefix.'${stationid}'.$type10csuffix,
-# finished 1521553005 - 2018-03-20 13:36:45	fipbordeaux_alt => 'http://www.fipradio.fr/sites/default/files/import_si/si_titre_antenne/FIP_player_current.json',
+# finished 1521553005 - 2018-03-20 13:36:45	fipbordeaux_alt => 'https://www.fipradio.fr/sites/default/files/import_si/si_titre_antenne/FIP_player_current.json',
 # finished December 2020 - fipbordeaux => 'https://api.radiofrance.fr/livemeta/pull/${stationid}',
 	fipbordeaux => $type4prefix.'${fetchid}'.$type4suffix,
 	# fipbordeaux_alt => $type3prefix1fip.'${stationid}'.$type3prefix2fip.$type3suffixfip,
-# finished 1521553005 - 2018-03-20 13:36:45	fipnantes_alt => 'http://www.fipradio.fr/sites/default/files/import_si/si_titre_antenne/FIP_player_current.json',
+# finished 1521553005 - 2018-03-20 13:36:45	fipnantes_alt => 'https://www.fipradio.fr/sites/default/files/import_si/si_titre_antenne/FIP_player_current.json',
 # finished December 2020 - fipnantes => 'https://api.radiofrance.fr/livemeta/pull/${stationid}',
 	fipnantes => $type4prefix.'${fetchid}'.$type4suffix,
 	# fipnantes_alt => $type3prefix1fip.'${stationid}'.$type3prefix2fip.$type3suffixfip,
-# finished 1521553005 - 2018-03-20 13:36:45	fipstrasbourg_alt => 'http://www.fipradio.fr/sites/default/files/import_si/si_titre_antenne/FIP_player_current.json',
+# finished 1521553005 - 2018-03-20 13:36:45	fipstrasbourg_alt => 'https://www.fipradio.fr/sites/default/files/import_si/si_titre_antenne/FIP_player_current.json',
 # finished December 2020 - fipstrasbourg => 'https://api.radiofrance.fr/livemeta/pull/${stationid}',
 	fipstrasbourg => $type4prefix.'${fetchid}'.$type4suffix,
 	# fipstrasbourg_alt => $type3prefix1fip.'${stationid}'.$type3prefix2fip.$type3suffixfip,
-# finished 1507650288 - 2017-10-10 16:44:48	fiprock_alt => 'http://www.fipradio.fr/sites/default/files/import_si_webradio_1/si_titre_antenne/FIP_player_current.json',
+# finished 1507650288 - 2017-10-10 16:44:48	fiprock_alt => 'https://www.fipradio.fr/sites/default/files/import_si_webradio_1/si_titre_antenne/FIP_player_current.json',
 # finished December 2020 - fiprock => 'https://api.radiofrance.fr/livemeta/pull/${stationid}',
 # finished November 2024 - fiprock => $type4prefix.'${fetchid}'.$type4suffix,
 # finished March 2026 - fiprock => $type9prefix.'${fetchid}'.$type9suffix,
 	fiprock => $type10prefix.'${stationid}'.$type10esuffix,
 	# fiprock_alt => $type3prefix1fip.'${stationid}'.$type3prefix2fip.$type3suffixfip,
-# finished 1507650914 - 2017-10-10 16:55:14	fipjazz_alt => 'http://www.fipradio.fr/sites/default/files/import_si_webradio_2/si_titre_antenne/FIP_player_current.json',
+# finished 1507650914 - 2017-10-10 16:55:14	fipjazz_alt => 'https://www.fipradio.fr/sites/default/files/import_si_webradio_2/si_titre_antenne/FIP_player_current.json',
 # finished December 2020 - fipjazz => 'https://api.radiofrance.fr/livemeta/pull/${stationid}',
 # finished March 2026 - fipjazz => $type4prefix.'${fetchid}'.$type4suffix,
 	fipjazz => $type10prefix.'${stationid}'.$type10esuffix,
 	# fipjazz_alt => $type3prefix1fip.'${stationid}'.$type3prefix2fip.$type3suffixfip,
-# finished 1507650885 - 2017-10-10 16:54:45	fipgroove_alt => 'http://www.fipradio.fr/sites/default/files/import_si_webradio_3/si_titre_antenne/FIP_player_current.json',
+# finished 1507650885 - 2017-10-10 16:54:45	fipgroove_alt => 'https://www.fipradio.fr/sites/default/files/import_si_webradio_3/si_titre_antenne/FIP_player_current.json',
 # finished December 2020 - fipgroove => 'https://api.radiofrance.fr/livemeta/pull/${stationid}',
 # finished March 2026 - fipgroove => $type4prefix.'${fetchid}'.$type4suffix,
 	fipgroove => $type10prefix.'${stationid}'.$type10esuffix,
 	# fipgroove_alt => $type3prefix1fip.'${stationid}'.$type3prefix2fip.$type3suffixfip,
-# finished 1507650800 - 2017-10-10 16:53:20	fipmonde_alt => 'http://www.fipradio.fr/sites/default/files/import_si_webradio_4/si_titre_antenne/FIP_player_current.json',
+# finished 1507650800 - 2017-10-10 16:53:20	fipmonde_alt => 'https://www.fipradio.fr/sites/default/files/import_si_webradio_4/si_titre_antenne/FIP_player_current.json',
 # finished December 2020 - fipmonde => 'https://api.radiofrance.fr/livemeta/pull/${stationid}',
 # finished March 2026 - fipmonde => $type4prefix.'${fetchid}'.$type4suffix,
 	fipmonde => $type10prefix.'${stationid}'.$type10esuffix,
 	# fipmonde_alt => $type3prefix1fip.'${stationid}'.$type3prefix2fip.$type3suffixfip,
-# finished 1507650797 - 2017-10-10 16:53:17	fipnouveau_alt => 'http://www.fipradio.fr/sites/default/files/import_si_webradio_5/si_titre_antenne/FIP_player_current.json',
+# finished 1507650797 - 2017-10-10 16:53:17	fipnouveau_alt => 'https://www.fipradio.fr/sites/default/files/import_si_webradio_5/si_titre_antenne/FIP_player_current.json',
 # finished December 2020 - fipnouveau => 'https://api.radiofrance.fr/livemeta/pull/${stationid}',
 # finished March 2026 - fipnouveau => $type4prefix.'${fetchid}'.$type4suffix,
 	fipnouveau => $type10prefix.'${stationid}'.$type10esuffix,
 	# fipnouveau_alt => $type3prefix1fip.'${stationid}'.$type3prefix2fip.$type3suffixfip,
-# finished 1507650800 - 2017-10-10 16:53:20	fipevenement_alt => 'http://www.fipradio.fr/sites/default/files/import_si_webradio_6/si_titre_antenne/FIP_player_current.json',
+# finished 1507650800 - 2017-10-10 16:53:20	fipevenement_alt => 'https://www.fipradio.fr/sites/default/files/import_si_webradio_6/si_titre_antenne/FIP_player_current.json',
 # FIP Evenement became FIP Autour Du Reggae
 # finished December 2020 - fipreggae => 'https://api.radiofrance.fr/livemeta/pull/${stationid}',
 # finished March 2026 - fipreggae => $type4prefix.'${fetchid}'.$type4suffix,
@@ -662,13 +662,13 @@ foreach my $metakey (keys(%$stationSet)){
 # Potential place for logos - https://charte.dnm.radiofrance.fr/logos.php
 # Also - https://mediateur.radiofrance.fr/wp-content/themes/radiofrance/img/radio-france.png
 my $icons = {
-	#fipradio => 'http://mediateur.radiofrance.fr/wp-content/themes/radiofrance/img/fip.png',
-	#fipradio => 'http://oblique.radiofrance.fr/files/charte/logos/png600/FIP.png',
+	#fipradio => 'https://mediateur.radiofrance.fr/wp-content/themes/radiofrance/img/fip.png',
+	#fipradio => 'https://oblique.radiofrance.fr/files/charte/logos/png600/FIP.png',
 	#fipradio => 'https://charte.radiofrance.fr/images/fip/fip.png',
 	fipradio => 'https://www.radiofrance.fr/pikapi/images/34e98566-058b-428f-a39e-d74bdef1cf77/600x600?webp=false',
-	fipbordeaux => 'http://mediateur.radiofrance.fr/wp-content/themes/radiofrance/img/fip.png',
-	fipnantes => 'http://mediateur.radiofrance.fr/wp-content/themes/radiofrance/img/fip.png',
-	fipstrasbourg => 'http://mediateur.radiofrance.fr/wp-content/themes/radiofrance/img/fip.png',
+	fipbordeaux => 'https://mediateur.radiofrance.fr/wp-content/themes/radiofrance/img/fip.png',
+	fipnantes => 'https://mediateur.radiofrance.fr/wp-content/themes/radiofrance/img/fip.png',
+	fipstrasbourg => 'https://mediateur.radiofrance.fr/wp-content/themes/radiofrance/img/fip.png',
 	fiprock => 'https://www.radiofrance.fr/pikapi/images/cda37279-f985-4017-bc03-2dad643c7306/600x600?webp=false',
 	fipjazz => 'https://www.radiofrance.fr/pikapi/images/2de59c50-9912-401e-9d1f-95a2f0b66567/600x600?webp=false',
 	fipgroove => 'https://www.radiofrance.fr/pikapi/images/95cf76c3-26bc-404e-be1c-b81666188c3f/600x600?webp=false',
@@ -694,12 +694,12 @@ my $icons = {
 	fmopera => 'https://www.radiofrance.fr/pikapi/images/c2e99581-41d7-4d8f-aa47-82ff4b2b33de/600x600?webp=false',
 	fmpianozen => 'https://www.radiofrance.fr/pikapi/images/2ed60106-b535-4949-8a40-5636bb0d9979/600x600?webp=false',
 	fmclassiquelove => 'https://www.radiofrance.fr/pikapi/images/f517eb9b-3860-4204-beaf-72d569331502/600x600?webp=false',
-	#fmclassiquelove => 'http://radionowplaying.com/logo/rfmusiqueclassiquelove.jpg',
+	#fmclassiquelove => 'https://radionowplaying.com/logo/rfmusiqueclassiquelove.jpg',
 	
 	#mouv => 'https://www.radiofrance.fr/sites/default/files/styles/format_16_9/public/2019-08/logo_mouv_bloc_c.png.jpeg',
-	#mouv => 'http://oblique.radiofrance.fr/files/charte/logos/png600/Mouv.png',
+	#mouv => 'https://oblique.radiofrance.fr/files/charte/logos/png600/Mouv.png',
 	mouv => 'https://www.radiofrance.fr/pikapi/images/13dc5910-3a90-45e8-880d-5e7e31d21a3c/600x600?webp=false',
-# finished late 2025 - 	mouvxtra => 'http://www.mouv.fr/sites/all/modules/rf/rf_lecteur_commun/lecteur_rf/img/logo_mouv_xtra.png',
+# finished late 2025 - 	mouvxtra => 'https://www.mouv.fr/sites/all/modules/rf/rf_lecteur_commun/lecteur_rf/img/logo_mouv_xtra.png',
 # finished late 2025 - 	mouvclassics => 'https://cdn.radiofrance.fr/s3/cruiser-production/2019/01/bb8da8da-f679-405f-8810-b4a172f6a32d/300x300_mouv-classic_02.jpg',
 # finished late 2025 - 	mouvdancehall => 'https://cdn.radiofrance.fr/s3/cruiser-production/2019/01/9d04e918-c907-4627-a332-1071bdc2366e/300x300_dancehall.jpg',
 # finished late 2025 - 	mouvrnb => 'https://cdn.radiofrance.fr/s3/cruiser-production/2019/01/f3bf764e-637c-48c0-b152-1a258726710f/300x300_rnb.jpg',
@@ -709,22 +709,22 @@ my $icons = {
 # finished late 2025 - 	mouvkidsnfamily => 'https://cdn.radiofrance.fr/s3/cruiser-production/2019/08/20b36ec0-fd19-4d92-b393-7977277e1452/300x300_mouv_webradio_kids_n_family.jpg',
 # finished late 2025 - 	mouvsansblabla => 'https://cdn.radiofrance.fr/s3/cruiser-production-eu3/2024/05/59a2cea8-2046-4473-885b-92b9497175ad/300x300_sc_visuel-mouvsansblabla-vert.jpg',
 	
-	#franceinter => 'http://oblique.radiofrance.fr/files/charte/logos/png600/FranceInter.png',	# Note - official uses https but (for now) http works and might help legacy devices
-	#franceinter => 'http://mediateur.radiofrance.fr/wp-content/themes/radiofrance/img/france-inter.png',
+	#franceinter => 'https://oblique.radiofrance.fr/files/charte/logos/png600/FranceInter.png',	# Note - official uses https but (for now) http works and might help legacy devices
+	#franceinter => 'https://mediateur.radiofrance.fr/wp-content/themes/radiofrance/img/france-inter.png',
 	#franceinter => 'https://charte.radiofrance.fr/images/franceinter/france-inter.png',
 	franceinter => 'https://www.radiofrance.fr/pikapi/images/c6288843-9269-4ca5-ab0e-49454aed8fdc/600x600?webp=false',
 	franceinterlamusiqueinter => 'https://www.radiofrance.fr/pikapi/images/2eb99120-ff28-414d-a805-c354c3967edf/600x600?webp=false',
 	franceintermonpetit => 'https://www.radiofrance.fr/pikapi/images/cbfde3c3-8213-45a6-ac89-b6a3b521025c/600x600?webp=false',
 	franceintermontoutpetit => 'https://www.radiofrance.fr/pikapi/images/0189684e-c44a-40f0-b833-2f5f126aaca3/600x600?webp=false',
 	
-	#franceinfo => 'http://mediateur.radiofrance.fr/wp-content/themes/radiofrance/img/france-info.png',
+	#franceinfo => 'https://mediateur.radiofrance.fr/wp-content/themes/radiofrance/img/france-info.png',
 	franceinfo => 'https://www.radiofrance.fr/pikapi/images/52bb749e-f832-4dd1-ba0a-8c5d11e0aa3a/600x600?webp=false',
-	#francemusique => 'http://mediateur.radiofrance.fr/wp-content/themes/radiofrance/img/france-musique.png',
-	#francemusique => 'http://oblique.radiofrance.fr/files/charte/logos/png600/FranceMusique.png',
+	#francemusique => 'https://mediateur.radiofrance.fr/wp-content/themes/radiofrance/img/france-musique.png',
+	#francemusique => 'https://oblique.radiofrance.fr/files/charte/logos/png600/FranceMusique.png',
 	#francemusique => 'https://charte.radiofrance.fr/images/francemusique/france-musique.png',
 	francemusique => 'https://www.radiofrance.fr/pikapi/images/df8d1b79-8823-4421-a694-2b7561430b79/600x600?webp=false',
-	#franceculture => 'http://mediateur.radiofrance.fr/wp-content/themes/radiofrance/img/france-culture.png',
-	#franceculture => 'http://oblique.radiofrance.fr/files/charte/logos/png600/FranceCulture.png',
+	#franceculture => 'https://mediateur.radiofrance.fr/wp-content/themes/radiofrance/img/france-culture.png',
+	#franceculture => 'https://oblique.radiofrance.fr/files/charte/logos/png600/FranceCulture.png',
 	#franceculture => 'https://charte.radiofrance.fr/images/franceculture/france-culture.png',
 	franceculture => 'https://www.radiofrance.fr/pikapi/images/9cee7dd1-ee0d-4b88-b764-3cf9b748c266/600x600?webp=false',
 	
@@ -5484,13 +5484,13 @@ sub toplevel {
 								name	=> 'France Inter (AAC)',
 								type	=> 'audio',
 								icon	=> $icons->{franceinter},
-								url	=> 'http://icecast.radiofrance.fr/franceinter-hifi.aac',
+								url	=> 'https://icecast.radiofrance.fr/franceinter-hifi.aac',
 								on_select	=> 'play'
 							},{
 								name	=> 'France Inter (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{franceinter},
-								url	=> 'http://icecast.radiofrance.fr/franceinter-midfi.mp3',
+								url	=> 'https://icecast.radiofrance.fr/franceinter-midfi.mp3',
 								on_select	=> 'play'
 							},
 						],
@@ -5534,13 +5534,13 @@ sub toplevel {
 								name	=> 'Mon petit France Inter (AAC)',
 								type	=> 'audio',
 								icon	=> $icons->{franceintermonpetit},
-								url	=> 'http://icecast.radiofrance.fr/monpetitfranceinter-hifi.aac',
+								url	=> 'https://icecast.radiofrance.fr/monpetitfranceinter-hifi.aac',
 								on_select	=> 'play'
 							},{
 								name	=> 'Mon petit France Inter (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{franceintermonpetit},
-								url	=> 'http://icecast.radiofrance.fr/monpetitfranceinter-midfi.mp3',
+								url	=> 'https://icecast.radiofrance.fr/monpetitfranceinter-midfi.mp3',
 								on_select	=> 'play'
 							},
 						],
@@ -5559,13 +5559,13 @@ sub toplevel {
 								name	=> 'Mon tout petit France Inter (AAC)',
 								type	=> 'audio',
 								icon	=> $icons->{franceintermontoutpetit},
-								url	=> 'http://icecast.radiofrance.fr/montoutpetitfranceinter-hifi.aac',
+								url	=> 'https://icecast.radiofrance.fr/montoutpetitfranceinter-hifi.aac',
 								on_select	=> 'play'
 							},{
 								name	=> 'Mon tout petit France Inter (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{franceintermontoutpetit},
-								url	=> 'http://icecast.radiofrance.fr/montoutpetitfranceinter-midfi.mp3',
+								url	=> 'https://icecast.radiofrance.fr/montoutpetitfranceinter-midfi.mp3',
 								on_select	=> 'play'
 							},
 						],
@@ -5590,14 +5590,14 @@ sub toplevel {
 									name        => 'FIP (AAC)',
 									type        => 'audio',
 									icon        => $icons->{fipradio},
-									url         => 'http://icecast.radiofrance.fr/fip-hifi.aac',
+									url         => 'https://icecast.radiofrance.fr/fip-hifi.aac',
 									on_select   => 'play'
 								},
 								{
 									name        => 'FIP (MP3)',
 									type        => 'audio',
 									icon        => $icons->{fipradio},
-									url         => 'http://icecast.radiofrance.fr/fip-midfi.mp3',
+									url         => 'https://icecast.radiofrance.fr/fip-midfi.mp3',
 									on_select   => 'play'
 								},
 							],
@@ -5615,13 +5615,13 @@ sub toplevel {
 									name	=> 'FIP Rock (AAC)',
 									type	=> 'audio',
 									icon	=> $icons->{fiprock},
-									url	=> 'http://icecast.radiofrance.fr/fiprock-hifi.aac',
+									url	=> 'https://icecast.radiofrance.fr/fiprock-hifi.aac',
 									on_select	=> 'play'
 								},{
 									name	=> 'FIP Rock (MP3)',
 									type	=> 'audio',
 									icon	=> $icons->{fiprock},
-									url	=> 'http://icecast.radiofrance.fr/fiprock-midfi.mp3',
+									url	=> 'https://icecast.radiofrance.fr/fiprock-midfi.mp3',
 									on_select	=> 'play'
 								},
 							]
@@ -5639,13 +5639,13 @@ sub toplevel {
 									name	=> 'FIP Jazz (AAC)',
 									type	=> 'audio',
 									icon	=> $icons->{fipjazz},
-									url	=> 'http://icecast.radiofrance.fr/fipjazz-hifi.aac',
+									url	=> 'https://icecast.radiofrance.fr/fipjazz-hifi.aac',
 									on_select	=> 'play'
 								},{
 									name	=> 'FIP Jazz (MP3)',
 									type	=> 'audio',
 									icon	=> $icons->{fipjazz},
-									url	=> 'http://icecast.radiofrance.fr/fipjazz-midfi.mp3',
+									url	=> 'https://icecast.radiofrance.fr/fipjazz-midfi.mp3',
 									on_select	=> 'play'
 								},
 							]
@@ -5663,13 +5663,13 @@ sub toplevel {
 									name	=> 'FIP Groove (AAC)',
 									type	=> 'audio',
 									icon	=> $icons->{fipgroove},
-									url	=> 'http://icecast.radiofrance.fr/fipgroove-hifi.aac',
+									url	=> 'https://icecast.radiofrance.fr/fipgroove-hifi.aac',
 									on_select	=> 'play'
 								},{
 									name	=> 'FIP Groove (MP3)',
 									type	=> 'audio',
 									icon	=> $icons->{fipgroove},
-									url	=> 'http://icecast.radiofrance.fr/fipgroove-midfi.mp3',
+									url	=> 'https://icecast.radiofrance.fr/fipgroove-midfi.mp3',
 									on_select	=> 'play'
 								},
 							]
@@ -5687,13 +5687,13 @@ sub toplevel {
 									name	=> 'FIP Metal (AAC)',
 									type	=> 'audio',
 									icon	=> $icons->{fipmetal},
-									url	=> 'http://icecast.radiofrance.fr/fipmetal-hifi.aac',
+									url	=> 'https://icecast.radiofrance.fr/fipmetal-hifi.aac',
 									on_select	=> 'play'
 								},{
 									name	=> 'FIP Metal (MP3)',
 									type	=> 'audio',
 									icon	=> $icons->{fipmetal},
-									url	=> 'http://icecast.radiofrance.fr/fipmetal-midfi.mp3',
+									url	=> 'https://icecast.radiofrance.fr/fipmetal-midfi.mp3',
 									on_select	=> 'play'
 								},
 							]
@@ -5711,13 +5711,13 @@ sub toplevel {
 									name	=> 'FIP Hip-Hop (AAC)',
 									type	=> 'audio',
 									icon	=> $icons->{fiphiphop},
-									url	=> 'http://icecast.radiofrance.fr/fiphiphop-hifi.aac',
+									url	=> 'https://icecast.radiofrance.fr/fiphiphop-hifi.aac',
 									on_select	=> 'play'
 								},{
 									name	=> 'FIP Hip-Hop (MP3)',
 									type	=> 'audio',
 									icon	=> $icons->{fiphiphop},
-									url	=> 'http://icecast.radiofrance.fr/fiphiphop-midfi.mp3',
+									url	=> 'https://icecast.radiofrance.fr/fiphiphop-midfi.mp3',
 									on_select	=> 'play'
 								},
 							]
@@ -5735,13 +5735,13 @@ sub toplevel {
 									name	=> 'FIP Electro (AAC)',
 									type	=> 'audio',
 									icon	=> $icons->{fipelectro},
-									url	=> 'http://icecast.radiofrance.fr/fipelectro-hifi.aac',
+									url	=> 'https://icecast.radiofrance.fr/fipelectro-hifi.aac',
 									on_select	=> 'play'
 								},{
 									name	=> 'FIP Electro (MP3)',
 									type	=> 'audio',
 									icon	=> $icons->{fipelectro},
-									url	=> 'http://icecast.radiofrance.fr/fipelectro-midfi.mp3',
+									url	=> 'https://icecast.radiofrance.fr/fipelectro-midfi.mp3',
 									on_select	=> 'play'
 								},
 							]
@@ -5759,13 +5759,13 @@ sub toplevel {
 									name	=> 'FIP Pop (AAC)',
 									type	=> 'audio',
 									icon	=> $icons->{fippop},
-									url	=> 'http://icecast.radiofrance.fr/fippop-hifi.aac',
+									url	=> 'https://icecast.radiofrance.fr/fippop-hifi.aac',
 									on_select	=> 'play'
 								},{
 									name	=> 'FIP Pop (MP3)',
 									type	=> 'audio',
 									icon	=> $icons->{fippop},
-									url	=> 'http://icecast.radiofrance.fr/fippop-midfi.mp3',
+									url	=> 'https://icecast.radiofrance.fr/fippop-midfi.mp3',
 									on_select	=> 'play'
 								},
 							]
@@ -5783,13 +5783,13 @@ sub toplevel {
 									name	=> 'FIP Monde (AAC)',
 									type	=> 'audio',
 									icon	=> $icons->{fipmonde},
-									url	=> 'http://icecast.radiofrance.fr/fipworld-hifi.aac',
+									url	=> 'https://icecast.radiofrance.fr/fipworld-hifi.aac',
 									on_select	=> 'play'
 								},{
 									name	=> 'FIP Monde (MP3)',
 									type	=> 'audio',
 									icon	=> $icons->{fipmonde},
-									url	=> 'http://icecast.radiofrance.fr/fipworld-midfi.mp3',
+									url	=> 'https://icecast.radiofrance.fr/fipworld-midfi.mp3',
 									on_select	=> 'play'
 								},
 							]
@@ -5807,13 +5807,13 @@ sub toplevel {
 									name	=> 'FIP Reggae (AAC)',
 									type	=> 'audio',
 									icon	=> $icons->{fipreggae},
-									url	=> 'http://icecast.radiofrance.fr/fipreggae-hifi.aac',
+									url	=> 'https://icecast.radiofrance.fr/fipreggae-hifi.aac',
 									on_select	=> 'play'
 								},{
 									name	=> 'FIP Reggae (MP3)',
 									type	=> 'audio',
 									icon	=> $icons->{fipreggae},
-									url	=> 'http://icecast.radiofrance.fr/fipreggae-midfi.mp3',
+									url	=> 'https://icecast.radiofrance.fr/fipreggae-midfi.mp3',
 									on_select	=> 'play'
 								},
 							]
@@ -5831,13 +5831,13 @@ sub toplevel {
 									name	=> 'FIP Nouveau (AAC)',
 									type	=> 'audio',
 									icon	=> $icons->{fipnouveau},
-									url	=> 'http://icecast.radiofrance.fr/fipnouveautes-hifi.aac',
+									url	=> 'https://icecast.radiofrance.fr/fipnouveautes-hifi.aac',
 									on_select	=> 'play'
 								},{
 									name	=> 'FIP Nouveau (MP3)',
 									type	=> 'audio',
 									icon	=> $icons->{fipnouveau},
-									url	=> 'http://icecast.radiofrance.fr/fipnouveautes-midfi.mp3',
+									url	=> 'https://icecast.radiofrance.fr/fipnouveautes-midfi.mp3',
 									on_select	=> 'play'
 								},
 							]
@@ -5855,13 +5855,13 @@ sub toplevel {
 									name	=> 'FIP Sacré français ! (AAC)',
 									type	=> 'audio',
 									icon	=> $icons->{fipsacre},
-									url	=> 'http://icecast.radiofrance.fr/fipsacrefrancais-hifi.aac',
+									url	=> 'https://icecast.radiofrance.fr/fipsacrefrancais-hifi.aac',
 									on_select	=> 'play'
 								},{
 									name	=> 'FIP Sacré français ! (MP3)',
 									type	=> 'audio',
 									icon	=> $icons->{fipsacre},
-									url	=> 'http://icecast.radiofrance.fr/fipsacrefrancais-midfi.mp3',
+									url	=> 'https://icecast.radiofrance.fr/fipsacrefrancais-midfi.mp3',
 									on_select	=> 'play'
 								},
 							]
@@ -5879,13 +5879,13 @@ sub toplevel {
 									name	=> 'FIP Cultes (AAC)',
 									type	=> 'audio',
 									icon	=> $icons->{fipcultes},
-									url	=> 'http://icecast.radiofrance.fr/fipcultes-hifi.aac',
+									url	=> 'https://icecast.radiofrance.fr/fipcultes-hifi.aac',
 									on_select	=> 'play'
 								},{
 									name	=> 'FIP Cultes (MP3)',
 									type	=> 'audio',
 									icon	=> $icons->{fipcultes},
-									url	=> 'http://icecast.radiofrance.fr/fipcultes-midfi.mp3',
+									url	=> 'https://icecast.radiofrance.fr/fipcultes-midfi.mp3',
 									on_select	=> 'play'
 								},
 							]
@@ -5909,13 +5909,13 @@ sub toplevel {
 							name	=> 'France Musique (AAC)',
 							type	=> 'audio',
 							icon	=> $icons->{francemusique},
-							url	=> 'http://icecast.radiofrance.fr/francemusique-hifi.aac',
+							url	=> 'https://icecast.radiofrance.fr/francemusique-hifi.aac',
 							on_select	=> 'play'
 						},{
 							name	=> 'France Musique (MP3)',
 							type	=> 'audio',
 							icon	=> $icons->{francemusique},
-							url	=> 'http://icecast.radiofrance.fr/francemusique-midfi.mp3',
+							url	=> 'https://icecast.radiofrance.fr/francemusique-midfi.mp3',
 							on_select	=> 'play'
 						},
 					]
@@ -5933,13 +5933,13 @@ sub toplevel {
 								name	=> 'France Musique Classique Easy (AAC)',
 								type	=> 'audio',
 								icon	=> $icons->{fmclassiqueeasy},
-								url	=> 'http://icecast.radiofrance.fr/francemusiqueeasyclassique-hifi.aac',
+								url	=> 'https://icecast.radiofrance.fr/francemusiqueeasyclassique-hifi.aac',
 								on_select	=> 'play'
 							},{
 								name	=> 'France Musique Classique Easy (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fmclassiqueeasy},
-								url	=> 'http://icecast.radiofrance.fr/francemusiqueeasyclassique-midfi.mp3',
+								url	=> 'https://icecast.radiofrance.fr/francemusiqueeasyclassique-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -5958,13 +5958,13 @@ sub toplevel {
 								name	=> 'France Musique Classique Love (AAC)',
 								type	=> 'audio',
 								icon	=> $icons->{fmclassiquelove},
-								url	=> 'http://icecast.radiofrance.fr/francemusiqueclassiquelove-hifi.aac',
+								url	=> 'https://icecast.radiofrance.fr/francemusiqueclassiquelove-hifi.aac',
 								on_select	=> 'play'
 							},{
 								name	=> 'France Musique Classique Love (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fmclassiquelove},
-								url	=> 'http://icecast.radiofrance.fr/francemusiqueclassiquelove-midfi.mp3',
+								url	=> 'https://icecast.radiofrance.fr/francemusiqueclassiquelove-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -5983,13 +5983,13 @@ sub toplevel {
 								name	=> 'France Musique Opéra (AAC)',
 								type	=> 'audio',
 								icon	=> $icons->{fmopera},
-								url	=> 'http://icecast.radiofrance.fr/francemusiqueopera-hifi.aac',
+								url	=> 'https://icecast.radiofrance.fr/francemusiqueopera-hifi.aac',
 								on_select	=> 'play'
 							},{
 								name	=> 'France Musique Opéra (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fmopera},
-								url	=> 'http://icecast.radiofrance.fr/francemusiqueopera-midfi.mp3',
+								url	=> 'https://icecast.radiofrance.fr/francemusiqueopera-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6007,13 +6007,13 @@ sub toplevel {
 								name	=> 'France Musique La Baroque (AAC)',
 								type	=> 'audio',
 								icon	=> $icons->{fmbaroque},
-								url	=> 'http://icecast.radiofrance.fr/francemusiquebaroque-hifi.aac',
+								url	=> 'https://icecast.radiofrance.fr/francemusiquebaroque-hifi.aac',
 								on_select	=> 'play'
 							},{
 								name	=> 'France Musique La Baroque (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fmbaroque},
-								url	=> 'http://icecast.radiofrance.fr/francemusiquebaroque-midfi.mp3',
+								url	=> 'https://icecast.radiofrance.fr/francemusiquebaroque-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6031,13 +6031,13 @@ sub toplevel {
 								name	=> 'France Musique Classique Plus (AAC)',
 								type	=> 'audio',
 								icon	=> $icons->{fmclassiqueplus},
-								url	=> 'http://icecast.radiofrance.fr/francemusiqueclassiqueplus-hifi.aac',
+								url	=> 'https://icecast.radiofrance.fr/francemusiqueclassiqueplus-hifi.aac',
 								on_select	=> 'play'
 							},{
 								name	=> 'France Musique Classique Plus (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fmclassiqueplus},
-								url	=> 'http://icecast.radiofrance.fr/francemusiqueclassiqueplus-midfi.mp3',
+								url	=> 'https://icecast.radiofrance.fr/francemusiqueclassiqueplus-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6055,13 +6055,13 @@ sub toplevel {
 								name	=> 'France Musique Concerts Radio France (AAC)',
 								type	=> 'audio',
 								icon	=> $icons->{fmconcertsradiofrance},
-								url	=> 'http://icecast.radiofrance.fr/francemusiqueconcertsradiofrance-hifi.aac',
+								url	=> 'https://icecast.radiofrance.fr/francemusiqueconcertsradiofrance-hifi.aac',
 								on_select	=> 'play'
 							},{
 								name	=> 'France Musique Concerts Radio France (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fmconcertsradiofrance},
-								url	=> 'http://icecast.radiofrance.fr/francemusiqueconcertsradiofrance-midfi.mp3',
+								url	=> 'https://icecast.radiofrance.fr/francemusiqueconcertsradiofrance-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6079,13 +6079,13 @@ sub toplevel {
 								name	=> 'France Musique La Jazz (AAC)',
 								type	=> 'audio',
 								icon	=> $icons->{fmlajazz},
-								url	=> 'http://icecast.radiofrance.fr/francemusiquelajazz-hifi.aac',
+								url	=> 'https://icecast.radiofrance.fr/francemusiquelajazz-hifi.aac',
 								on_select	=> 'play'
 							},{
 								name	=> 'France Musique La Jazz (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fmlajazz},
-								url	=> 'http://icecast.radiofrance.fr/francemusiquelajazz-midfi.mp3',
+								url	=> 'https://icecast.radiofrance.fr/francemusiquelajazz-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6103,13 +6103,13 @@ sub toplevel {
 								name	=> 'France Musique La Contemporaine (AAC)',
 								type	=> 'audio',
 								icon	=> $icons->{fmlacontemporaine},
-								url	=> 'http://icecast.radiofrance.fr/francemusiquelacontemporaine-hifi.aac',
+								url	=> 'https://icecast.radiofrance.fr/francemusiquelacontemporaine-hifi.aac',
 								on_select	=> 'play'
 							},{
 								name	=> 'France Musique La Contemporaine (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fmlacontemporaine},
-								url	=> 'http://icecast.radiofrance.fr/francemusiquelacontemporaine-midfi.mp3',
+								url	=> 'https://icecast.radiofrance.fr/francemusiquelacontemporaine-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6127,13 +6127,13 @@ sub toplevel {
 								name	=> 'France Musique Piano Zen (AAC)',
 								type	=> 'audio',
 								icon	=> $icons->{fmpianozen},
-								url => 'http://icecast.radiofrance.fr/francemusiquepianozen-hifi.aac',
+								url => 'https://icecast.radiofrance.fr/francemusiquepianozen-hifi.aac',
 								on_select	=> 'play'
 							},{
 								name	=> 'France Musique Piano Zen (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fmpianozen},
-								url	=> 'http://icecast.radiofrance.fr/francemusiquepianozen-midfi.mp3',
+								url	=> 'https://icecast.radiofrance.fr/francemusiquepianozen-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6151,13 +6151,13 @@ sub toplevel {
 								name	=> 'France Musique Ocora Musiques du Monde (AAC)',
 								type	=> 'audio',
 								icon	=> $icons->{fmocoramonde},
-								url	=> 'http://icecast.radiofrance.fr/francemusiqueocoramonde-hifi.aac',
+								url	=> 'https://icecast.radiofrance.fr/francemusiqueocoramonde-hifi.aac',
 								on_select	=> 'play'
 							},{
 								name	=> 'France Musique Ocora Musiques du Monde (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fmocoramonde},
-								url	=> 'http://icecast.radiofrance.fr/francemusiqueocoramonde-midfi.mp3',
+								url	=> 'https://icecast.radiofrance.fr/francemusiqueocoramonde-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6175,13 +6175,13 @@ sub toplevel {
 								name	=> 'France Musique Films (AAC)',
 								type	=> 'audio',
 								icon	=> $icons->{fmlabo},
-								url	=> 'http://icecast.radiofrance.fr/francemusiquelabo-hifi.aac',
+								url	=> 'https://icecast.radiofrance.fr/francemusiquelabo-hifi.aac',
 								on_select	=> 'play'
 							},{
 								name	=> 'France Musique Films (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fmlabo},
-								url	=> 'http://icecast.radiofrance.fr/francemusiquelabo-midfi.mp3',
+								url	=> 'https://icecast.radiofrance.fr/francemusiquelabo-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6201,13 +6201,13 @@ sub toplevel {
 						name	=> 'Mouv\' (AAC)',
 						type	=> 'audio',
 						icon	=> $icons->{mouv},
-						url	=> 'http://icecast.radiofrance.fr/mouv-hifi.aac',
+						url	=> 'https://icecast.radiofrance.fr/mouv-hifi.aac',
 						on_select	=> 'play'
 					},{
 						name	=> 'Mouv\' (MP3)',
 						type	=> 'audio',
 						icon	=> $icons->{mouv},
-						url	=> 'http://icecast.radiofrance.fr/mouv-midfi.mp3',
+						url	=> 'https://icecast.radiofrance.fr/mouv-midfi.mp3',
 						on_select	=> 'play'
 					},
 				]
@@ -6226,13 +6226,13 @@ sub toplevel {
 						name	=> 'franceinfo (AAC)',
 						type	=> 'audio',
 						icon	=> $icons->{franceinfo},
-						url	=> 'http://icecast.radiofrance.fr/franceinfo-hifi.aac',
+						url	=> 'https://icecast.radiofrance.fr/franceinfo-hifi.aac',
 						on_select	=> 'play'
 					},{
 						name	=> 'franceinfo (MP3)',
 						type	=> 'audio',
 						icon	=> $icons->{franceinfo},
-						url	=> 'http://icecast.radiofrance.fr/franceinfo-midfi.mp3',
+						url	=> 'https://icecast.radiofrance.fr/franceinfo-midfi.mp3',
 						on_select	=> 'play'
 					},
 				]
@@ -6250,13 +6250,13 @@ sub toplevel {
 						name	=> 'France Culture (AAC)',
 						type	=> 'audio',
 						icon	=> $icons->{franceculture},
-						url	=> 'http://icecast.radiofrance.fr/franceculture-hifi.aac',
+						url	=> 'https://icecast.radiofrance.fr/franceculture-hifi.aac',
 						on_select	=> 'play'
 					},{
 						name	=> 'France Culture (MP3)',
 						type	=> 'audio',
 						icon	=> $icons->{franceculture},
-						url	=> 'http://icecast.radiofrance.fr/franceculture-midfi.mp3',
+						url	=> 'https://icecast.radiofrance.fr/franceculture-midfi.mp3',
 						on_select	=> 'play'
 					},
 				]
@@ -6285,7 +6285,7 @@ sub toplevel {
 								name	=> 'ici 100% Chanson Française (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fb100chanson},
-								url	=> 'http://icecast.radiofrance.fr/fbchansonfrancaise-midfi.mp3',
+								url	=> 'https://icecast.radiofrance.fr/fbchansonfrancaise-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6308,7 +6308,7 @@ sub toplevel {
 								name	=> 'ici 100% années 80 (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbannees80},
-								url	=> 'http://icecast.radiofrance.fr/fb100pour100annees80-midfi.mp3',
+								url	=> 'https://icecast.radiofrance.fr/fb100pour100annees80-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6328,7 +6328,7 @@ sub toplevel {
 								name	=> 'ici Alsace (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbalsace},
-								url	=> 'http://direct.francebleu.fr/live/fbalsace-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbalsace-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6346,7 +6346,7 @@ sub toplevel {
 								name	=> 'ici Armorique (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbarmorique},
-								url	=> 'http://direct.francebleu.fr/live/fbarmorique-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbarmorique-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6364,7 +6364,7 @@ sub toplevel {
 								name	=> 'ici Auxerre (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbauxerre},
-								url	=> 'http://direct.francebleu.fr/live/fbauxerre-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbauxerre-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6382,7 +6382,7 @@ sub toplevel {
 								name	=> 'ici Azur (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbazur},
-								url	=> 'http://direct.francebleu.fr/live/fbazur-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbazur-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6400,7 +6400,7 @@ sub toplevel {
 								name	=> 'ici Béarn Bigorre (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbbearn},
-								url	=> 'http://direct.francebleu.fr/live/fbbearn-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbbearn-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6418,7 +6418,7 @@ sub toplevel {
 								name	=> 'ici Belfort-Montbéliard (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbbelfort},
-								url	=> 'http://direct.francebleu.fr/live/fbbelfort-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbbelfort-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6436,7 +6436,7 @@ sub toplevel {
 								name	=> 'ici Berry (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbberry},
-								url	=> 'http://direct.francebleu.fr/live/fbberry-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbberry-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6454,7 +6454,7 @@ sub toplevel {
 								name	=> 'ici Besançon (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbbesancon},
-							url	=> 'http://direct.francebleu.fr/live/fbbesancon-midfi.mp3',
+							url	=> 'https://direct.francebleu.fr/live/fbbesancon-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6472,7 +6472,7 @@ sub toplevel {
 								name	=> 'ici Bourgogne (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbbourgogne},
-								url	=> 'http://direct.francebleu.fr/live/fbbourgogne-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbbourgogne-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6490,7 +6490,7 @@ sub toplevel {
 								name	=> 'ici Breizh Izel (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbbreizhizel},
-								url	=> 'http://direct.francebleu.fr/live/fbbreizizel-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbbreizizel-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6508,7 +6508,7 @@ sub toplevel {
 								name	=> 'ici Champagne-Ardenne (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbchampagne},
-								url	=> 'http://direct.francebleu.fr/live/fbchampagne-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbchampagne-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6526,7 +6526,7 @@ sub toplevel {
 								name	=> 'ici Cotentin (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbcotentin},
-								url	=> 'http://direct.francebleu.fr/live/fbcotentin-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbcotentin-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6544,7 +6544,7 @@ sub toplevel {
 								name	=> 'ici Creuse (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbcreuse},
-								url	=> 'http://direct.francebleu.fr/live/fbcreuse-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbcreuse-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6562,7 +6562,7 @@ sub toplevel {
 								name	=> 'ici Drôme Ardèche (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbdromeardeche},
-								url	=> 'http://direct.francebleu.fr/live/fbdromeardeche-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbdromeardeche-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6582,7 +6582,7 @@ sub toplevel {
 								name	=> 'ici Elsass (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbelsass},
-								url	=> 'http://direct.francebleu.fr/live/fbelsass-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbelsass-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6600,7 +6600,7 @@ sub toplevel {
 								name	=> 'ici Gard Lozère (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbgardlozere},
-								url	=> 'http://direct.francebleu.fr/live/fbgardlozere-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbgardlozere-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6618,7 +6618,7 @@ sub toplevel {
 								name	=> 'ici Gascogne (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbgascogne},
-								url	=> 'http://direct.francebleu.fr/live/fbgascogne-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbgascogne-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6636,7 +6636,7 @@ sub toplevel {
 								name	=> 'ici Gironde (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbgironde},
-								url	=> 'http://direct.francebleu.fr/live/fbgironde-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbgironde-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6654,7 +6654,7 @@ sub toplevel {
 								name	=> 'ici Hérault (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbherault},
-								url	=> 'http://direct.francebleu.fr/live/fbherault-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbherault-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6672,7 +6672,7 @@ sub toplevel {
 								name	=> 'ici Isère (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbisere},
-								url	=> 'http://direct.francebleu.fr/live/fbisere-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbisere-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6690,7 +6690,7 @@ sub toplevel {
 								name	=> 'ici La Rochelle (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fblarochelle},
-								url	=> 'http://direct.francebleu.fr/live/fblarochelle-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fblarochelle-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6708,7 +6708,7 @@ sub toplevel {
 								name	=> 'ici Limousin (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fblimousin},
-								url	=> 'http://direct.francebleu.fr/live/fblimousin-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fblimousin-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6726,7 +6726,7 @@ sub toplevel {
 								name	=> 'ici Loire Océan (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbloireocean},
-								url	=> 'http://direct.francebleu.fr/live/fbloireocean-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbloireocean-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6744,7 +6744,7 @@ sub toplevel {
 								name	=> 'ici Lorraine (Moselle et Pays Haut) (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fblorrainenord},
-								url	=> 'http://direct.francebleu.fr/live/fblorrainenord-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fblorrainenord-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6762,7 +6762,7 @@ sub toplevel {
 								name	=> 'ici Maine (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbmaine},
-								url	=> 'http://direct.francebleu.fr/live/fbmaine-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbmaine-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6780,7 +6780,7 @@ sub toplevel {
 								name	=> 'ici Mayenne (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbmayenne},
-								url	=> 'http://direct.francebleu.fr/live/fbmayenne-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbmayenne-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6798,7 +6798,7 @@ sub toplevel {
 								name	=> 'ici Nord (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbnord},
-								url	=> 'http://direct.francebleu.fr/live/fbnord-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbnord-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6817,7 +6817,7 @@ sub toplevel {
 								name	=> 'ici Normandie (Calvados - Orne) (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbbassenormandie},
-								url	=> 'http://direct.francebleu.fr/live/fbbassenormandie-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbbassenormandie-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6836,7 +6836,7 @@ sub toplevel {
 								name	=> 'ici Normandie (Seine-Maritime - Eure) (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbhautenormandie},
-								url	=> 'http://direct.francebleu.fr/live/fbhautenormandie-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbhautenormandie-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6854,7 +6854,7 @@ sub toplevel {
 								name	=> 'ici Occitanie (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbtoulouse},
-								url	=> 'http://direct.francebleu.fr/live/fbtoulouse-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbtoulouse-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6872,7 +6872,7 @@ sub toplevel {
 								name	=> 'ici Orléans (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fborleans},
-								url	=> 'http://direct.francebleu.fr/live/fborleans-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fborleans-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6891,7 +6891,7 @@ sub toplevel {
 								name	=> 'ici Paris Île-de-France (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbparis},
-								url	=> 'http://direct.francebleu.fr/live/fb1071-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fb1071-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6909,7 +6909,7 @@ sub toplevel {
 								name	=> 'ici Pays Basque (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbpaysbasque},
-								url	=> 'http://direct.francebleu.fr/live/fbpaysbasque-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbpaysbasque-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6927,7 +6927,7 @@ sub toplevel {
 								name	=> 'ici Pays d\'Auvergne (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbpaysdauvergne},
-								url	=> 'http://direct.francebleu.fr/live/fbpaysdauvergne-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbpaysdauvergne-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6945,7 +6945,7 @@ sub toplevel {
 								name	=> 'ici Pays de Savoie (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbpaysdesavoie},
-								url	=> 'http://direct.francebleu.fr/live/fbpaysdesavoie-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbpaysdesavoie-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6963,7 +6963,7 @@ sub toplevel {
 								name	=> 'ici Périgord (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbperigord},
-								url	=> 'http://direct.francebleu.fr/live/fbperigord-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbperigord-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6981,7 +6981,7 @@ sub toplevel {
 								name	=> 'ici Picardie (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbpicardie},
-								url	=> 'http://direct.francebleu.fr/live/fbpicardie-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbpicardie-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -6999,7 +6999,7 @@ sub toplevel {
 								name	=> 'ici Poitou (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbpoitou},
-								url	=> 'http://direct.francebleu.fr/live/fbpoitou-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbpoitou-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -7017,7 +7017,7 @@ sub toplevel {
 								name	=> 'ici Provence (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbprovence},
-								url	=> 'http://direct.francebleu.fr/live/fbprovence-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbprovence-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -7035,7 +7035,7 @@ sub toplevel {
 								name	=> 'ici RCFM (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbrcfm},
-								url	=> 'http://direct.francebleu.fr/live/fbfrequenzamora-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbfrequenzamora-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -7053,7 +7053,7 @@ sub toplevel {
 								name	=> 'ici Roussillon (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbroussillon},
-								url	=> 'http://direct.francebleu.fr/live/fbroussillon-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbroussillon-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -7072,7 +7072,7 @@ sub toplevel {
 								name	=> 'ici Saint-Étienne Loire (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbsaintetienneloire},
-								url	=> 'http://direct.francebleu.fr/live/fbstetienne-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbstetienne-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -7090,7 +7090,7 @@ sub toplevel {
 								name	=> 'ici Lorraine (Meurthe-et-Moselle et Vosges) (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbsudlorraine},
-								url	=> 'http://direct.francebleu.fr/live/fbsudlorraine-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbsudlorraine-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -7108,7 +7108,7 @@ sub toplevel {
 								name	=> 'ici Touraine (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbtouraine},
-								url	=> 'http://direct.francebleu.fr/live/fbtouraine-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbtouraine-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
@@ -7126,7 +7126,7 @@ sub toplevel {
 								name	=> 'ici Vaucluse (MP3)',
 								type	=> 'audio',
 								icon	=> $icons->{fbvaucluse},
-								url	=> 'http://direct.francebleu.fr/live/fbvaucluse-midfi.mp3',
+								url	=> 'https://direct.francebleu.fr/live/fbvaucluse-midfi.mp3',
 								on_select	=> 'play'
 							},
 						]
